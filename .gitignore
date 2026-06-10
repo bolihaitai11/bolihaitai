@@ -1,0 +1,8 @@
+# 系统文件
+*.lnk
+Thumbs.db
+.DS_Store
+
+# Word文档（非网站需要）
+*.doc
+*.docx

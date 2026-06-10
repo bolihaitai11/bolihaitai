@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="郑博文 - AI影视创作者 & 内容创作者 - 个人作品集">
+    <title>Zheng Bowen — Creative Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">Bwen</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link" data-text="关于">关于</a>
+                <a href="#skills" class="nav-link" data-text="技能">技能</a>
+                <a href="#projects" class="nav-link" data-text="作品">作品</a>
+                <a href="#experience" class="nav-link" data-text="经历">经历</a>
+                <a href="#contact" class="nav-link" data-text="联系">联系</a>
+            </div>
+            <button class="nav-toggle" aria-label="菜单">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="hero-tag">AI VIDEO CREATOR</span>
+                <span class="hero-divider"></span>
+                <span class="hero-tag">CONTENT ARTIST</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line" data-animate="reveal">
+                    <span class="title-text">郑博文</span>
+                </span>
+                <span class="title-line" data-animate="reveal">
+                    <span class="title-sub">Creative Portfolio</span>
+                </span>
+            </h1>
+            <p class="hero-desc" data-animate="fade-up">
+                用AI重新定义影像创作边界<br>
+                从心理学的温度到数字艺术的精度
+            </p>
+            <div class="hero-actions" data-animate="fade-up">
+                <a href="#projects" class="btn-primary">
+                    <span class="btn-text">探索作品</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#contact" class="btn-ghost">
+                    <span class="btn-text">联系我</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-animate="fade-up">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="355">0</span>
+                    <span class="stat-label">原创视频</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="87">0</span>
+                    <span class="stat-suffix">W+</span>
+                    <span class="stat-label">总播放量</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="74">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">平均完播率</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-suffix">年</span>
+                    <span class="stat-label">创作经验</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">关于我</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="about-image-container">
+                    <div class="about-image-border"></div>
+                    <img src="头像.jpg" alt="郑博文" class="about-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="about-image-placeholder" style="display:none;">
+                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="45" r="20" stroke="currentColor" stroke-width="2"/>
+                            <ellipse cx="60" cy="95" rx="35" ry="25" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-glow"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/>
+                        </svg>
+                    </div>
+                    <h3>AI影像创作者</h3>
+                    <p>自学即梦等AI视频生成工具，能独立完成提示词设计、素材抽卡与筛选。掌握AI生成素材的后期拼接、瑕疵修复与镜头衔接流程，可快速产出符合商业要求的AI视频片段。</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z"/>
+                        </svg>
+                    </div>
+                    <h3>影视制作人</h3>
+                    <p>熟练使用Adobe PR/PS/AE、剪映专业版，精通视频剪辑、字幕制作、动态特效与音效匹配。掌握剪映基础调色，能独立完成短视频全流程制作。</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                    </div>
+                    <h3>内容运营者</h3>
+                    <p>独立运营B站个人账号8年，累计355条原创视频，总播放量87W+。通过数据复盘将视频平均完播率从15.9%提升至74%，具备成熟的内容迭代与效果验证思维。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">技能矩阵</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🎬</span>
+                    影视创作
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-progress="95">
+                        <div class="skill-info">
+                            <span class="skill-name">Adobe Premiere Pro</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="90">
+                        <div class="skill-info">
+                            <span class="skill-name">Adobe After Effects</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="88">
+                        <div class="skill-info">
+                            <span class="skill-name">Adobe Photoshop</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="92">
+                        <div class="skill-info">
+                            <span class="skill-name">剪映专业版</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <span class="category-icon">🤖</span>
+                    AI工具
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-progress="85">
+                        <div class="skill-info">
+                            <span class="skill-name">即梦 AI 视频生成</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="82">
+                        <div class="skill-info">
+                            <span class="skill-name">AI提示词工程</span>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="78">
+                        <div class="skill-info">
+                            <span class="skill-name">AI后期拼接与修复</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <span class="category-icon">📊</span>
+                    综合能力
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-progress="90">
+                        <div class="skill-info">
+                            <span class="skill-name">内容策划与运营</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="88">
+                        <div class="skill-info">
+                            <span class="skill-name">数据分析与复盘</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                    <div class="skill-item" data-progress="92">
+                        <div class="skill-info">
+                            <span class="skill-name">Office 办公套件</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">代表作品</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <!-- Featured Project - Bilibili -->
+        <div class="project-featured">
+            <div class="project-featured-bg"></div>
+            <div class="project-featured-content">
+                <span class="project-badge">FEATURED</span>
+                <h3 class="project-title-large">Bilibili 个人自媒体</h3>
+                <p class="project-desc">
+                    独立运营8年，累计原创视频<b>355条</b>，总播放量突破<b>87W+</b>，单条最高播放量<b>45万</b>。
+                    从选题策划到剪辑发布全流程把控，通过数据驱动将完播率从15.9%提升至74%。
+                </p>
+                <div class="project-metrics">
+                    <div class="metric">
+                        <span class="metric-value">87W+</span>
+                        <span class="metric-label">总播放</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">355</span>
+                        <span class="metric-label">作品数</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">45W</span>
+                        <span class="metric-label">最高播放</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">74%</span>
+                        <span class="metric-label">完播率</span>
+                    </div>
+                </div>
+                <!-- Bilibili 代表作封面 -->
+                <a href="https://www.bilibili.com/video/BV1uc411N7NA/?spm_id_from=333.1387.upload.video_card.click&vd_source=31ced32c8d19fea5849e1c707c69d5fd" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="以撒运营教学.jpg" alt="以撒运营教学 - Bilibili代表作">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在B站观看</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- AI Projects -->
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <a href="https://www.bilibili.com/video/BV1u5D3BgEfG/?spm_id_from=333.1365.top_right_bar_window_history.content.click" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="建模猫.png" alt="建模猫 - AI辅助成片">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在B站观看</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card-body">
+                    <span class="project-tag">AI VIDEO</span>
+                    <h4>AI辅助成片</h4>
+                    <p>使用即梦等AI工具完成的全流程创作，从提示词设计到后期拼接修复</p>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <a href="https://www.bilibili.com/video/BV1es4y1g7oG/?share_source=copy_web&vd_source=59f294bd873f7f944b8d2f8fc6283617" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="efls烟花.png" alt="efls烟花 - AI视频">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在B站观看</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card-body">
+                    <span class="project-tag">PR EDIT</span>
+                    <h4>efls烟花</h4>
+                    <p>PR剪辑作品，烟花特效与视觉氛围的光影变幻</p>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <a href="https://www.bilibili.com/video/BV1hz7SzDEKz/?share_source=copy_web&vd_source=59f294bd873f7f944b8d2f8fc6283617" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="氛围感.png" alt="氛围感 - AI视频">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在B站观看</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card-body">
+                    <span class="project-tag">PR EDIT</span>
+                    <h4>氛围感</h4>
+                    <p>PR剪辑作品，通过剪辑与调色打造沉浸式氛围影像</p>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <a href="https://www.bilibili.com/video/BV1RH4y1X7Tg/?share_source=copy_web&vd_source=59f294bd873f7f944b8d2f8fc6283617" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="播放器结尾.png" alt="播放器结尾 - AI视频">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在B站观看</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card-body">
+                    <span class="project-tag">PR EDIT</span>
+                    <h4>播放器结尾</h4>
+                    <p>PR剪辑作品，播放器风格结尾动画与特效合成</p>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <a href="https://v.douyin.com/7-RgT5nLFM4/" target="_blank" rel="noopener" class="project-cover-link">
+                    <div class="project-cover-image">
+                        <img src="vlog混剪.png" alt="vlog混剪 - PR剪辑">
+                        <div class="project-cover-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                            </svg>
+                            <span>在抖音观看</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card-body">
+                    <span class="project-tag">PR EDIT</span>
+                    <h4>vlog混剪</h4>
+                    <p>PR剪辑作品，公式化vlog卡点混剪，高中生活记录</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">经历轨迹</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-animate>
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                    <div class="timeline-period">2018.06 — 2026.06</div>
+                    <h3>Bilibili 内容创作者</h3>
+                    <p class="timeline-subtitle">个人自媒体账号运营</p>
+                    <ul class="timeline-details">
+                        <li>独立运营B站个人账号，累计产出原创视频355条，总播放量87W+，粉丝280</li>
+                        <li>全程负责视频选题策划、素材拍摄、剪辑调色、特效制作与发布运营</li>
+                        <li>通过数据复盘将视频平均完播率从15.9%提升至74%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-animate>
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                    <div class="timeline-period">2024.05 — 2026.06</div>
+                    <h3>AI影视个人练习项目</h3>
+                    <p class="timeline-subtitle">AI视频创作探索</p>
+                    <ul class="timeline-details">
+                        <li>独立完成5条完整AI辅助成片，涵盖AI生成→后期→成片全流程</li>
+                        <li>掌握即梦等AI视频生成工具，可快速产出商业级AI视频片段</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-animate>
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                    <div class="timeline-period">2022.09 — 2024.06</div>
+                    <h3>大学生心理协会 · 副社长</h3>
+                    <p class="timeline-subtitle">活动策划与团队管理</p>
+                    <ul class="timeline-details">
+                        <li>主导2届525大学生心理健康日活动，最高参与人数1000+</li>
+                        <li>负责社团纳新60人，协调内部工作分工与节奏</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-animate>
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass-card">
+                    <div class="timeline-period">2021.09 — 2025.06</div>
+                    <h3>湖州师范学院</h3>
+                    <p class="timeline-subtitle">应用心理学（师范）· 本科</p>
+                    <ul class="timeline-details">
+                        <li>主修：普通心理学、发展心理学、教育心理学、实验心理学、心理统计与测量</li>
+                        <li>担任心理委员，搭建班级心理支持系统</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">建立联系</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p class="contact-intro">
+                    如果你对我的作品感兴趣，或者想要合作，<br>
+                    欢迎随时联系我。
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:414102690@qq.com" class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                            </svg>
+                        </div>
+                        <span>414102690@qq.com</span>
+                    </a>
+                    <a href="tel:18757677032" class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+                            </svg>
+                        </div>
+                        <span>187-5767-7032</span>
+                    </a>
+                    <a href="#" class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                            </svg>
+                        </div>
+                        <span>Bilibili @玻璃海苔T_T</span>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-visual">
+                <div class="contact-circle"></div>
+                <div class="contact-circle-2"></div>
+                <div class="contact-cta">
+                    <span class="cta-text">LET'S</span>
+                    <span class="cta-text large">CREATE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Bwen</span>
+                <span class="footer-copy">© 2026 郑博文</span>
+            </div>
+            <div class="footer-text">
+                Designed with passion & AI
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-bg"></div>
+        <div class="mobile-nav-content">
+            <a href="#about" class="mobile-link">关于</a>
+            <a href="#skills" class="mobile-link">技能</a>
+            <a href="#projects" class="mobile-link">作品</a>
+            <a href="#experience" class="mobile-link">经历</a>
+            <a href="#contact" class="mobile-link">联系</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
